@@ -16,7 +16,7 @@ def add_gauss(img, mean=0, std=1, speckle = False):
     "std" = standard deviation of the gaussian noise array to be generated.
     """
 
-    gauss = np.random.normal(min=mean - std,max=mean + std,(img.shape[0],img.shape[1]))
+    gauss = np.random.normal((img.shape[0],img.shape[1]), min=mean - std,max=mean + std)
 
     if speckle==False:
         img_gauss = img + gauss
